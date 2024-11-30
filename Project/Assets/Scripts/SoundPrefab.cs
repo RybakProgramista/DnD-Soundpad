@@ -30,12 +30,5 @@ public class SoundPrefab : MonoBehaviour
         typeText.text = sound.getType();
         isLooped.isOn = sound.getIsLooped();
         pin.value = sound.getNumpadID();
-        GetComponent<AudioSource>().clip = sound.getClip();
-    }
-    public void playSound()
-    {
-        AudioSource source = GetComponent<AudioSource>();
-        if (source.isPlaying) source.Stop();
-        else source.Play();
     }
 }
